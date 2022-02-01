@@ -1,5 +1,14 @@
 import type { NextPage, GetStaticProps } from 'next';
 import Image from 'next/image';
+import styled from 'styled-components';
+
+const Button = ({ label }: { label: string }) => (
+  <button type="button">{label}</button>
+);
+
+const Title = styled(Button)`
+  ${(props) => props.theme.borderRadius}
+`;
 
 interface HomePageProps {
   title: string;
